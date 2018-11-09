@@ -35,7 +35,7 @@ reach.get('files', {
        request(res.body[i]);
        //decrement i and call the loop again if i > 0
        if (--i) loop(i);
-    }, 2000)
+    }, 1000)
     //pass the number of iterations as an argument
   })(res.body.length);
 });
