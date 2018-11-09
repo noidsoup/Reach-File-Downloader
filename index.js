@@ -30,7 +30,7 @@ reach.get('files', {
 }, (err, res) => {
   if (err) return console.log(err);
 
-  (function loop (i) {
+  (function loop (i) {yield
     setTimeout(function () {
        request(res.body[i]);
        //decrement i and call the loop again if i > 0
