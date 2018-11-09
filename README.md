@@ -1,0 +1,1 @@
+A simple node script to pull files from reach. Add the correct keys to config/default.json and run `npm start` to download all files under the account and activationId into the `files` folder.
