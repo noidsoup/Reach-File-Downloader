@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "mocha ./test/*.js --timeout 10000"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@helios-interactive/reachjs": "^5.2.0",
-    "config": "^2.0.1"
+    "dotenv": "^6.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }

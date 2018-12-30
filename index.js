@@ -1,16 +1,11 @@
 const https = require('https');
 const fs = require('fs');
-const config = require('config');
+require('dotenv').config();
+
 const reach = require('@helios-interactive/reachjs');
 
-const url = config.get('reach.url');
-const api_key = config.get('reach.api_key');
-const activationId = config.get('reach.activationId');
-
-reach.setUrl(url);
-reach.key = api_key;
-
-const files = [];
+reach.setUrl(process.env.REACH_URL);
+reach.key = process.env.API_KEY;
 
 const request = (file) => {
   if (file === undefined) return;
@@ -24,13 +19,13 @@ const request = (file) => {
 reach.get('files', {
   limit: 999,
   where: {
-    'meta.activationId': activationId,
+    'meta.activationId': process.env.ACTIVATION_ID,
     'meta.type': { nlike: 'waiver' },
   },
 }, (err, res) => {
   if (err) return console.log(err);
 
-  (function loop (i) {yield
+  (function loop (i) {
     setTimeout(function () {
        request(res.body[i]);
        //decrement i and call the loop again if i > 0
