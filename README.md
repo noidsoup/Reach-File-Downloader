@@ -4,6 +4,6 @@
 # Usage
 Populate a .env file with the relevant keys in this format:
 
-REACH_URL="https://xxxxxxxxx/api"
-ACTIVATION_ID="xxxx-xxxx-xxxx-xxxx"
-API_KEY="xxxxxx"
+- REACH_URL="https://xxxxxxxxx/api"
+- ACTIVATION_ID="xxxx-xxxx-xxxx-xxxx"
+- API_KEY="xxxxxx"
