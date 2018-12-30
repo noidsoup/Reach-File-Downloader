@@ -9,5 +9,5 @@ Populate a .env file with the relevant keys in this format:
 - API_KEY="xxxxxx"
 
 ## Usage
-run `npm start`
-run `npm test`
+- run `npm start`
+- run `npm test`
